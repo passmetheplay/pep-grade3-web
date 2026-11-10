@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>人教版 PEP 英语 三年级 · 教材结构</title>
+<style>
+:root{
+  --bg:#fbfbf9; --panel:#fff; --ink:#1c1c1a; --muted:#6b6b66;
+  --line:#e6e4dd; --accent:#1f6f5c; --accent-soft:#e8f2ee;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+  font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+aside{border-right:1px solid var(--line);background:var(--panel);padding:22px 0;
+  position:sticky;top:0;height:100vh;overflow-y:auto}
+.brand{padding:0 20px 16px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.brand h1{font-size:15px;margin:0 0 4px;letter-spacing:.02em}
+.brand p{margin:0;font-size:12px;color:var(--muted);line-height:1.5}
+.tabs{display:flex;gap:6px;padding:0 16px 14px}
+.tab{flex:1;border:1px solid var(--line);background:var(--bg);border-radius:7px;
+  padding:7px 0;font-size:12.5px;cursor:pointer;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+nav{padding:0 10px}
+nav button{display:block;width:100%;text-align:left;background:none;border:0;border-radius:7px;
+  padding:8px 10px;font:inherit;font-size:13.5px;color:var(--ink);cursor:pointer;line-height:1.35}
+nav button:hover{background:var(--accent-soft)}
+nav button[aria-current="true"]{background:var(--accent-soft);font-weight:600;box-shadow:inset 3px 0 0 var(--accent)}
+nav button small{display:block;color:var(--muted);font-weight:400;font-size:11.5px}
+nav .sec{font-size:11px;color:var(--muted);letter-spacing:.08em;padding:14px 10px 6px;text-transform:uppercase}
+main{padding:34px 44px 80px;max-width:960px}
+.head{display:flex;align-items:flex-start;gap:26px;justify-content:space-between;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:26px}
+.head .idx{font-size:12px;color:var(--accent);letter-spacing:.12em;font-weight:600}
+.head h2{margin:4px 0 2px;font-size:27px;letter-spacing:-.01em;line-height:1.2}
+.head .zh{color:var(--muted);font-size:14px}
+.bigq{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:0 8px 8px 0;padding:13px 18px;max-width:420px}
+.bigq span{font-size:11px;color:var(--muted);letter-spacing:.1em;display:block;margin-bottom:3px}
+.bigq b{font-size:17px;font-weight:600;line-height:1.35;display:block}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px}
+.chip{font-size:12px;color:var(--muted);background:var(--panel);border:1px solid var(--line);
+  border-radius:999px;padding:4px 11px}
+section.part{margin-bottom:34px}
+.parthead{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.parthead h3{margin:0;font-size:16px;letter-spacing:.02em}
+.parthead .tag{font-size:11px;padding:2px 8px;border-radius:5px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+.parthead .tag.opt{background:#f6f1e3;color:#8a6d1f}
+.q{color:var(--muted);font-size:14px;margin:0 0 12px}
+.q b{color:var(--ink);font-weight:600}
+.fn{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.fn span{font-size:12px;background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:3px 9px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-weight:600;font-size:12px;color:var(--muted);letter-spacing:.04em;
+  border-bottom:1px solid var(--line);padding:7px 10px}
+td{border-bottom:1px solid #f0eee8;padding:9px 10px;vertical-align:top}
+td.en{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.55}
+td.zh{color:var(--muted);width:40%}
+tr:hover td{background:#fcfcf9}
+.rule{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:16px 18px}
+.rule h4{margin:0 0 8px;font-size:13px;letter-spacing:.04em;color:var(--accent)}
+.rule .pair{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 0}
+.rule .pair code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;background:var(--bg);
+  border:1px solid var(--line);border-radius:5px;padding:3px 8px}
+.chant{margin:12px 0 0;font-size:13px;color:var(--muted);font-style:italic;line-height:1.7}
+ol.check{margin:0;padding-left:20px;font-size:14px}
+ol.check li{margin-bottom:6px}
+.vfilter{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.vfilter button{font-size:12px;border:1px solid var(--line);background:var(--panel);border-radius:999px;
+  padding:4px 12px;cursor:pointer;color:var(--muted)}
+.vfilter button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.lv{font-size:10.5px;font-weight:600;border-radius:4px;padding:1.5px 6px;white-space:nowrap}
+.lv.y{background:#e2efe9;color:#16604f}
+.lv.n{background:#f2f1ec;color:#7d7d75}
+.ipa{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--muted)}
+.pg{font-size:11.5px;color:var(--muted);white-space:nowrap}
+.searchbox{position:sticky;top:0;z-index:5;background:var(--bg);padding:0 0 14px;isolation:isolate}
+.searchbox input{width:100%;font:inherit;font-size:14px;padding:10px 14px;border:1px solid var(--line);
+  border-radius:8px;background:var(--panel);outline:none}
+.searchbox input:focus{border-color:var(--accent)}
+.hits{position:absolute;left:0;right:0;top:calc(100% - 6px);z-index:30;display:none;
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  box-shadow:0 12px 28px rgba(0,0,0,.08);max-height:62vh;overflow:auto;padding:6px}
+.hits.on{display:block}
+.hit{display:flex;gap:12px;align-items:baseline;width:100%;text-align:left;background:none;border:0;
+  border-bottom:1px solid #f0eee8;padding:9px 10px;font:inherit;font-size:13.5px;cursor:pointer;border-radius:6px}
+.hit:hover{background:var(--accent-soft)}
+.hit .u{font-size:11.5px;color:var(--muted);margin-left:auto;white-space:nowrap}
+.hit .empty{color:var(--muted)}
+.empty{padding:14px;color:var(--muted);font-size:13px}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media (max-width:820px){
+  .layout{grid-template-columns:1fr}
+  aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}
+  main{padding:22px 18px 60px}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside>
+    <div class="brand">
+      <h1>人教版 PEP · 三年级</h1>
+      <p id="edition"></p>
+    </div>
+    <div class="tabs" id="tabs"></div>
+    <nav id="nav"></nav>
+  </aside>
+  <main>
+    <div class="searchbox">
+      <input id="q" type="search" placeholder="搜索单词、句型或中文（如 giraffe / 长颈鹿 / 你叫什么）"/>
+      <div class="hits" id="hits"></div>
+    </div>
+    <div id="view"></div>
+  </main>
+</div>
+<script>
+const DATA = {"books": [{"id": "v1", "label": "三年级上册", "edition": "2024 年版（依据《义务教育英语课程标准（2022 年版）》编写）", "pages": 98, "units": [{"n": 1, "tEn": "Making friends", "tZh": "交朋友", "pages": [2, 13], "bigQ": "How do we make friends?", "song": "Nice to meet you!", "A": {"q": "How do we greet friends?", "fn": ["打招呼与自我介绍", "初次见面问候"], "s": [{"en": "Hello! I'm Mike Black.", "zh": "你好！我是迈克·布莱克。"}, {"en": "Hi! My name is Wu Binbin.", "zh": "嗨！我叫吴斌斌。"}, {"en": "Nice to meet you.", "zh": "见到你很高兴。"}, {"en": "Nice to meet you too.", "zh": "见到你（我）也很高兴。"}]}, "B": {"q": "How can we be a good friend?", "fn": ["表达友好、分享与致谢", "描述好朋友的行为"], "s": [{"en": "We can share.", "zh": "我们可以分享。"}, {"en": "Oh no!", "zh": "噢，不！"}, {"en": "It's OK, Chen Jie.", "zh": "没关系，陈杰。"}, {"en": "Hey, Sarah! We can share.", "zh": "嘿，萨拉！我们可以分享。"}, {"en": "Thanks, Sarah. / Thank you, Chen Jie.", "zh": "谢谢，萨拉。/ 谢谢你，陈杰。"}, {"en": "I am nice to my friends.", "zh": "我对我的朋友们很好。"}, {"en": "I listen and say \"Hi!\" I smile too. I help and share. I play fair too.", "zh": "我倾听、问好、微笑；我帮忙、分享，也公平游戏。"}]}, "phonics": [{"letter": "Aa", "sound": "/æ/", "examples": ["apple", "bag"]}, {"letter": "Bb", "sound": "/b/", "examples": ["bed", "Bob"]}, {"letter": "Cc", "sound": "/k/", "examples": ["cat", "can"]}, {"letter": "Dd", "sound": "/d/", "examples": ["dog", "sad"]}], "spell": null, "project": "Make a mind map of making friends 交友思维导图", "reading": "Zoom 和 Zip 成为朋友（p12–13）", "check": ["I can greet people and show friendliness.", "I can say the names of body parts.", "I can say different ways to be a good friend.", "I can read, write and say Aa, Bb, Cc and Dd."], "vocab": [{"word": "name", "ipa": "/neɪm/", "zh": "名字", "page": 4, "level": "理解"}, {"word": "nice", "ipa": "/naɪs/", "zh": "令人愉快的；友好的", "page": 4, "level": "理解"}, {"word": "ear", "ipa": "/ɪə(r)/", "zh": "耳朵", "page": 5, "level": "运用"}, {"word": "hand", "ipa": "/hænd/", "zh": "手", "page": 5, "level": "运用"}, {"word": "eye", "ipa": "/aɪ/", "zh": "眼睛", "page": 5, "level": "运用"}, {"word": "mouth", "ipa": "/maʊθ/", "zh": "嘴", "page": 5, "level": "运用"}, {"word": "arm", "ipa": "/ɑːm/", "zh": "胳膊", "page": 5, "level": "运用"}, {"word": "can", "ipa": "/kən, kæn/", "zh": "可以", "page": 7, "level": "理解"}, {"word": "share", "ipa": "/ʃeə(r)/", "zh": "分享", "page": 7, "level": "运用"}, {"word": "smile", "ipa": "/smaɪl/", "zh": "微笑；笑", "page": 8, "level": "运用"}, {"word": "listen", "ipa": "/ˈlɪsn/", "zh": "听；倾听", "page": 8, "level": "运用"}, {"word": "help", "ipa": "/help/", "zh": "帮助", "page": 8, "level": "运用"}, {"word": "say", "ipa": "/seɪ/", "zh": "说；讲", "page": 9, "level": "理解"}, {"word": "friend", "ipa": "/frend/", "zh": "朋友", "page": 9, "level": "理解"}, {"word": "good", "ipa": "/ɡʊd/", "zh": "好的", "page": 9, "level": "理解"}]}, {"n": 2, "tEn": "Different families", "tZh": "不同的家庭", "pages": [14, 25], "bigQ": "What makes a family?", "song": "My family ／ Finger family song", "A": {"q": "Who lives with you?", "fn": ["介绍家庭成员", "向家人介绍朋友"], "s": [{"en": "This is my grandma.", "zh": "这是我的奶奶。"}, {"en": "Look! This is my family.", "zh": "看！这是我的家庭。"}, {"en": "Mum! Dad! This is my friend, Sarah Miller.", "zh": "妈妈！爸爸！这是我的朋友萨拉。"}, {"en": "Who lives with you?", "zh": "谁和你住在一起？"}]}, "B": {"q": "How are families different?", "fn": ["确认他人身份（一般疑问句 Is this/that…）", "描述家庭大小与构成"], "s": [{"en": "Is that your brother?", "zh": "那是你弟弟吗？"}, {"en": "Yes, it is.", "zh": "对，是的。"}, {"en": "No, it's my cousin.", "zh": "不，是我堂/表兄弟（姐妹）。"}, {"en": "I have an uncle. I have an aunt. I have two cousins too.", "zh": "我有一个叔叔，一个姑姑，还有两个堂/表兄妹。"}, {"en": "They love each other.", "zh": "他们相互关爱。"}, {"en": "This family is small / big. They love each other too.", "zh": "这个家庭小 / 大。他们也彼此相爱。"}]}, "phonics": [{"letter": "Ee", "sound": "/e/", "examples": ["egg", "nest"]}, {"letter": "Ff", "sound": "/f/", "examples": ["fish", "beef"]}, {"letter": "Gg", "sound": "/ɡ/", "examples": ["girl", "pig"]}, {"letter": "Hh", "sound": "/h/", "examples": ["hot", "hat"]}], "spell": null, "project": "Make a family tree 制作家谱", "reading": "小家庭与大家庭（p24–25）", "check": ["I can introduce my family to others.", "I can name different family members.", "I can say how families are different.", "I can read, write and say Ee, Ff, Gg and Hh."], "vocab": [{"word": "mum", "ipa": "/mʌm/", "zh": "（口语）妈妈", "page": 16, "level": "运用"}, {"word": "dad", "ipa": "/dæd/", "zh": "（口语）爸爸；爹爹", "page": 16, "level": "运用"}, {"word": "grandma", "ipa": "/ˈɡrænmɑː/", "zh": "奶奶；姥姥", "page": 16, "level": "运用"}, {"word": "grandpa", "ipa": "/ˈɡrænpɑː/", "zh": "爷爷；姥爷", "page": 16, "level": "运用"}, {"word": "grandfather", "ipa": "/ˈɡrænfɑːðə(r)/", "zh": "（外）祖父；爷爷；姥爷；外公", "page": 17, "level": "运用"}, {"word": "grandmother", "ipa": "/ˈɡrænmʌðə(r)/", "zh": "（外）祖母；奶奶；姥姥；外婆", "page": 17, "level": "运用"}, {"word": "mother", "ipa": "/ˈmʌðə(r)/", "zh": "母亲；妈妈", "page": 17, "level": "运用"}, {"word": "father", "ipa": "/ˈfɑːðə(r)/", "zh": "父亲；爸爸", "page": 17, "level": "运用"}, {"word": "me", "ipa": "/miː/", "zh": "我", "page": 17, "level": "运用"}, {"word": "sister", "ipa": "/ˈsɪstə(r)/", "zh": "姐；妹", "page": 17, "level": "运用"}, {"word": "family", "ipa": "/ˈfæməli/", "zh": "家；家庭", "page": 17, "level": "理解"}, {"word": "have", "ipa": "/hæv/", "zh": "有", "page": 19, "level": "理解"}, {"word": "big", "ipa": "/bɪɡ/", "zh": "大的", "page": 19, "level": "理解"}, {"word": "cousin", "ipa": "/ˈkʌzn/", "zh": "堂（表）兄弟；堂（表）姐妹", "page": 19, "level": "运用"}, {"word": "brother", "ipa": "/ˈbrʌðə(r)/", "zh": "哥；弟", "page": 19, "level": "运用"}, {"word": "baby", "ipa": "/ˈbeɪbi/", "zh": "婴儿", "page": 20, "level": "运用"}, {"word": "uncle", "ipa": "/ˈʌŋkl/", "zh": "伯父；叔父；舅父；姑父；姨父", "page": 20, "level": "运用"}, {"word": "aunt", "ipa": "/ɑːnt/", "zh": "伯母；婶母；舅母；姑母；姨母", "page": 20, "level": "运用"}, {"word": "small", "ipa": "/smɔːl/", "zh": "小的", "page": 21, "level": "理解"}]}, {"n": 3, "tEn": "Our animal friends", "tZh": "我们的动物朋友", "pages": [26, 37], "bigQ": "How are animals different?", "song": "Animal song", "A": {"q": "What pets do you know?", "fn": ["询问与回答是否拥有某物（Do you have…?）", "谈论宠物"], "s": [{"en": "Good morning, Mike!", "zh": "早上好，迈克！"}, {"en": "Good morning! Come in.", "zh": "早上好！进来吧。"}, {"en": "Do you have a pet?", "zh": "你有宠物吗？"}, {"en": "Yes, I do. I have a cat.", "zh": "是的，我有。我有一只猫。"}, {"en": "No, I don't.", "zh": "不，我没有。"}, {"en": "I like your dog. / I like fish. I like cats. I like birds. I like rabbits.", "zh": "我喜欢你的狗。/ 我喜欢鱼、猫、鸟、兔子。"}]}, "B": {"q": "What wild animals do you know?", "fn": ["询问近处/远处的事物（What's this/that?）", "描述野生动物特征"], "s": [{"en": "Let's go to the zoo!", "zh": "我们一起去动物园吧！"}, {"en": "Great!", "zh": "太好了！"}, {"en": "What's this? — It's a fox.", "zh": "这是什么？——是只狐狸。"}, {"en": "Miss White, what's that?", "zh": "怀特老师，那是什么？"}, {"en": "It's a red panda. It's cute!", "zh": "是只小熊猫。它很可爱！"}, {"en": "The elephant is big! The fish is small! The giraffe is tall! The lion is fast!", "zh": "大象很大！鱼很小！长颈鹿很高！狮子很快！"}]}, "phonics": [{"letter": "Ii", "sound": "/ɪ/", "examples": ["ill", "kid"]}, {"letter": "Jj", "sound": "/dʒ/", "examples": ["job", "jet"]}, {"letter": "Kk", "sound": "/k/", "examples": ["Kim", "kite"]}, {"letter": "Ll", "sound": "/l/", "examples": ["leg", "lion"]}], "spell": null, "project": "Make an animal picture book 制作动物图画书", "reading": "动物们为什么了不起（p36–37）", "check": ["I can tell others about my pets.", "I can talk about wild animals.", "I can group different animals.", "I can read, write and say Ii, Jj, Kk and Ll."], "vocab": [{"word": "like", "ipa": "/laɪk/", "zh": "喜欢", "page": 28, "level": "理解"}, {"word": "dog", "ipa": "/dɒɡ/", "zh": "狗", "page": 28, "level": "运用"}, {"word": "pet", "ipa": "/pet/", "zh": "宠物", "page": 28, "level": "理解"}, {"word": "cat", "ipa": "/kæt/", "zh": "猫", "page": 28, "level": "运用"}, {"word": "fish", "ipa": "/fɪʃ/", "zh": "鱼；鱼肉", "page": 29, "level": "运用"}, {"word": "bird", "ipa": "/bɜːd/", "zh": "鸟", "page": 29, "level": "运用"}, {"word": "rabbit", "ipa": "/ˈræbɪt/", "zh": "兔", "page": 29, "level": "运用"}, {"word": "go", "ipa": "/ɡəʊ/", "zh": "去；走", "page": 31, "level": "理解"}, {"word": "zoo", "ipa": "/zuː/", "zh": "动物园", "page": 31, "level": "理解"}, {"word": "fox", "ipa": "/fɒks/", "zh": "狐狸", "page": 31, "level": "理解"}, {"word": "Miss", "ipa": "/mɪs/", "zh": "（学生对女教师的称呼）老师；女士", "page": 31, "level": "理解"}, {"word": "panda", "ipa": "/ˈpændə/", "zh": "大熊猫", "page": 31, "level": "运用"}, {"word": "red panda", "ipa": "—", "zh": "小熊猫", "page": 31, "level": "理解"}, {"word": "cute", "ipa": "/kjuːt/", "zh": "可爱的", "page": 31, "level": "理解"}, {"word": "monkey", "ipa": "/ˈmʌŋki/", "zh": "猴子", "page": 32, "level": "运用"}, {"word": "tiger", "ipa": "/ˈtaɪɡə(r)/", "zh": "老虎", "page": 32, "level": "运用"}, {"word": "elephant", "ipa": "/ˈelɪfənt/", "zh": "大象", "page": 32, "level": "运用"}, {"word": "lion", "ipa": "/ˈlaɪən/", "zh": "狮；狮子", "page": 32, "level": "运用"}, {"word": "animal", "ipa": "/ˈænɪml/", "zh": "动物", "page": 33, "level": "理解"}, {"word": "giraffe", "ipa": "/dʒəˈrɑːf/", "zh": "长颈鹿", "page": 33, "level": "理解"}, {"word": "tall", "ipa": "/tɔːl/", "zh": "高的", "page": 33, "level": "理解"}, {"word": "fast", "ipa": "/fɑːst/", "zh": "快的", "page": 33, "level": "理解"}]}, {"n": 4, "tEn": "Plants around us", "tZh": "我们身边的植物", "pages": [38, 49], "bigQ": "How do plants and people help each other?", "song": "Plants and us", "A": {"q": "What do we get from plants?", "fn": ["询问与表达喜好（Do you like…?）", "说出植物提供的东西"], "s": [{"en": "Mike, do you like apples?", "zh": "迈克，你喜欢苹果吗？"}, {"en": "Yes, I do. And you?", "zh": "是的，我喜欢。你呢？"}, {"en": "No, I don't. I like bananas.", "zh": "不，我不喜欢。我喜欢香蕉。"}, {"en": "Do you like the farm?", "zh": "你们喜欢农场吗？"}, {"en": "I like the fresh air.", "zh": "我喜欢新鲜的空气。"}]}, "B": {"q": "How can we help plants?", "fn": ["说明如何帮助植物", "表达植物与人的相互关系"], "s": [{"en": "The school gardens need help. How can we help?", "zh": "学校花园需要帮忙。我们能怎么帮？"}, {"en": "We can water the grass / flowers.", "zh": "我们可以给草 / 花浇水。"}, {"en": "We can plant new trees.", "zh": "我们可以新种些树。"}, {"en": "Plants need air, water and sun.", "zh": "植物需要空气、水和阳光。"}, {"en": "Plants can give us many things.", "zh": "植物能为我们提供很多东西。"}]}, "phonics": [{"letter": "Mm", "sound": "/m/", "examples": ["map", "mum"]}, {"letter": "Nn", "sound": "/n/", "examples": ["new", "fan"]}, {"letter": "Oo", "sound": "/ɒ/", "examples": ["orange", "fox"]}, {"letter": "Pp", "sound": "/p/", "examples": ["pen", "cup"]}], "spell": null, "project": "Make a paper garden 制作纸花园", "reading": "一棵苹果树的自述（p48–49）", "check": ["I can ask about fruit and say the fruit I like.", "I can name some plants and talk about how they grow.", "I can say how we help plants and plants help us.", "I can read, write and say Mm, Nn, Oo and Pp."], "vocab": [{"word": "apple", "ipa": "/ˈæpl/", "zh": "苹果", "page": 40, "level": "运用"}, {"word": "banana", "ipa": "/bəˈnɑːnə/", "zh": "香蕉", "page": 40, "level": "运用"}, {"word": "farm", "ipa": "/fɑːm/", "zh": "农场", "page": 40, "level": "理解"}, {"word": "air", "ipa": "/eə(r)/", "zh": "空气", "page": 40, "level": "运用"}, {"word": "orange", "ipa": "/ˈɒrɪndʒ/", "zh": "橙子；柑橘", "page": 41, "level": "运用"}, {"word": "grape", "ipa": "/ɡreɪp/", "zh": "葡萄", "page": 41, "level": "运用"}, {"word": "school", "ipa": "/skuːl/", "zh": "学校", "page": 43, "level": "理解"}, {"word": "garden", "ipa": "/ˈɡɑːdn/", "zh": "花园", "page": 43, "level": "理解"}, {"word": "need", "ipa": "/niːd/", "zh": "需要", "page": 43, "level": "理解"}, {"word": "water", "ipa": "/ˈwɔːtə(r)/", "zh": "给……浇水；水", "page": 43, "level": "运用"}, {"word": "flower", "ipa": "/ˈflaʊə(r)/", "zh": "花；花朵", "page": 43, "level": "运用"}, {"word": "grass", "ipa": "/ɡrɑːs/", "zh": "草；草地", "page": 43, "level": "运用"}, {"word": "plant", "ipa": "/plɑːnt/", "zh": "种植；植物", "page": 43, "level": "理解"}, {"word": "new", "ipa": "/njuː/", "zh": "新的", "page": 43, "level": "理解"}, {"word": "tree", "ipa": "/triː/", "zh": "树", "page": 43, "level": "运用"}, {"word": "sun", "ipa": "/sʌn/", "zh": "阳光；太阳", "page": 44, "level": "运用"}, {"word": "give", "ipa": "/ɡɪv/", "zh": "给", "page": 45, "level": "理解"}, {"word": "us", "ipa": "/ʌs/", "zh": "我们", "page": 45, "level": "理解"}, {"word": "them", "ipa": "/ðəm, ðem/", "zh": "它们；他们；她们", "page": 45, "level": "理解"}]}, {"n": 5, "tEn": "The colourful world", "tZh": "多彩的世界", "pages": [50, 61], "bigQ": "Why are colours important?", "song": "Colour song", "A": {"q": "What colours do you see?", "fn": ["询问与说明颜色", "说出颜色混合的结果"], "s": [{"en": "What colour is it?", "zh": "它是什么颜色？"}, {"en": "It's orange. / It's green.", "zh": "它是橙红色。/ 它是绿色。"}, {"en": "Red and blue make purple.", "zh": "红色加蓝色是紫色。"}, {"en": "Blue and yellow make green.", "zh": "蓝色加黄色是绿色。"}, {"en": "I see colours here and there. Purple flowers, green grass and blue sea.", "zh": "我到处都能看到色彩：紫色的花、绿色的草、蓝色的大海。"}]}, "B": {"q": "How do colours help us?", "fn": ["表达颜色喜好", "说明颜色的含义与用途"], "s": [{"en": "What colours do you like?", "zh": "你喜欢什么颜色？"}, {"en": "I like red and pink.", "zh": "我喜欢红色和粉色。"}, {"en": "Let's draw some purple and brown birds.", "zh": "我们一起画一些紫色和棕色的鸟吧。"}, {"en": "Red can say \"No!\" Green can say \"Go!\"", "zh": "红色表示“停！”，绿色表示“行！”。"}, {"en": "Blue can say \"Use again!\" Yellow can say \"Be careful!\"", "zh": "蓝色表示“可循环使用”，黄色表示“小心”。"}]}, "phonics": [{"letter": "Qq (qu)", "sound": "/kw/", "examples": ["quiet", "queen"]}, {"letter": "Rr", "sound": "/r/", "examples": ["red", "ruler"]}, {"letter": "Ss", "sound": "/s/", "examples": ["see", "bus"]}, {"letter": "Tt", "sound": "/t/", "examples": ["Ted", "sit"]}, {"letter": "Uu", "sound": "/ʌ/", "examples": ["up", "run"]}], "spell": null, "project": "Make a colour flip book 制作颜色翻翻书", "reading": "向日葵的一生（p60–61）", "check": ["I can tell others about the colours I see and like.", "I can tell the colour of things.", "I can talk about what colours mean.", "I can read, write and say Qq, Rr, Ss, Tt and Uu."], "vocab": [{"word": "colour", "ipa": "/ˈkʌlə(r)/", "zh": "颜色", "page": 52, "level": "理解"}, {"word": "orange", "ipa": "/ˈɒrɪndʒ/", "zh": "橙红色；橙红色的", "page": 52, "level": "运用"}, {"word": "green", "ipa": "/ɡriːn/", "zh": "绿色；绿色的", "page": 52, "level": "运用"}, {"word": "red", "ipa": "/red/", "zh": "红色；红色的", "page": 52, "level": "运用"}, {"word": "blue", "ipa": "/bluː/", "zh": "蓝色；蓝色的", "page": 52, "level": "运用"}, {"word": "make", "ipa": "/meɪk/", "zh": "使出现；做", "page": 52, "level": "理解"}, {"word": "purple", "ipa": "/ˈpɜːpl/", "zh": "紫色；紫色的", "page": 52, "level": "运用"}, {"word": "brown", "ipa": "/braʊn/", "zh": "棕色；棕色的", "page": 53, "level": "运用"}, {"word": "bear", "ipa": "/beə(r)/", "zh": "熊", "page": 53, "level": "理解"}, {"word": "yellow", "ipa": "/ˈjeləʊ/", "zh": "黄色；黄色的", "page": 53, "level": "运用"}, {"word": "duck", "ipa": "/dʌk/", "zh": "鸭", "page": 53, "level": "理解"}, {"word": "sea", "ipa": "/siː/", "zh": "海；海洋", "page": 53, "level": "理解"}, {"word": "some", "ipa": "/səm, sʌm/", "zh": "一些", "page": 55, "level": "理解"}, {"word": "pink", "ipa": "/pɪŋk/", "zh": "粉色；粉色的", "page": 55, "level": "运用"}, {"word": "draw", "ipa": "/drɔː/", "zh": "画", "page": 55, "level": "理解"}, {"word": "white", "ipa": "/waɪt/", "zh": "白色；白色的", "page": 56, "level": "运用"}, {"word": "black", "ipa": "/blæk/", "zh": "黑色；黑色的", "page": 56, "level": "运用"}]}, {"n": 6, "tEn": "Useful numbers", "tZh": "有用的数字", "pages": [62, 73], "bigQ": "Why are numbers important?", "song": "Numbers", "A": {"q": "When do we use numbers?", "fn": ["询问与回答年龄", "数字 1–5"], "s": [{"en": "How old are you?", "zh": "你几岁了？"}, {"en": "I'm five years old.", "zh": "我五岁了。"}, {"en": "Me too.", "zh": "我也是。"}, {"en": "Binbin, this is my brother, Sam.", "zh": "斌斌，这是我弟弟萨姆。"}]}, "B": {"q": "How useful are numbers?", "fn": ["询问数量（How many…?）", "购物询价与付钱", "数字 6–10"], "s": [{"en": "How many apples? — Two.", "zh": "几个苹果？——两个。"}, {"en": "I have ten yuan. / I have six yuan.", "zh": "我有十元。/ 我有六元。"}, {"en": "Great! Let's go to the shop!", "zh": "好极了！我们一起去商店吧！"}, {"en": "That's ten yuan, please. — Here you are.", "zh": "（共）十元，谢谢。——给您。"}, {"en": "It's seven o'clock. Hurry!", "zh": "七点了。快点！"}, {"en": "Happy birthday!", "zh": "生日快乐！"}, {"en": "Oh, one more cut for the dog.", "zh": "噢，再切一块给小狗。"}]}, "phonics": [{"letter": "Vv", "sound": "/v/", "examples": ["van", "vet"]}, {"letter": "Ww", "sound": "/w/", "examples": ["we", "win"]}, {"letter": "Xx", "sound": "/ks/", "examples": ["box", "six"]}, {"letter": "Yy", "sound": "/j/", "examples": ["yellow", "yo-yo"]}, {"letter": "Zz", "sound": "/z/", "examples": ["Zip", "quiz"]}], "spell": null, "project": "Make a birthday card 制作生日贺卡", "reading": "甲骨文里的数字“六”（p72–73）", "check": ["I can ask about age and number.", "I can count things with the numbers 1 to 10.", "I can use the numbers 1 to 10 in different places.", "I can read, write and say Vv, Ww, Xx, Yy and Zz."], "vocab": [{"word": "old", "ipa": "/əʊld/", "zh": "（多少）岁；年纪；旧的", "page": 64, "level": "理解"}, {"word": "five", "ipa": "/faɪv/", "zh": "五", "page": 64, "level": "运用"}, {"word": "year", "ipa": "/jɪə(r)/", "zh": "年纪；年", "page": 64, "level": "理解"}, {"word": "one", "ipa": "/wʌn/", "zh": "一", "page": 65, "level": "运用"}, {"word": "two", "ipa": "/tuː/", "zh": "二", "page": 65, "level": "运用"}, {"word": "three", "ipa": "/θriː/", "zh": "三", "page": 65, "level": "运用"}, {"word": "four", "ipa": "/fɔː(r)/", "zh": "四", "page": 65, "level": "运用"}, {"word": "ten", "ipa": "/ten/", "zh": "十", "page": 67, "level": "运用"}, {"word": "six", "ipa": "/sɪks/", "zh": "六", "page": 67, "level": "运用"}, {"word": "seven", "ipa": "/ˈsevn/", "zh": "七", "page": 68, "level": "运用"}, {"word": "eight", "ipa": "/eɪt/", "zh": "八", "page": 68, "level": "运用"}, {"word": "nine", "ipa": "/naɪn/", "zh": "九", "page": 68, "level": "运用"}, {"word": "o'clock", "ipa": "/əˈklɒk/", "zh": "（表示整点）……点钟", "page": 69, "level": "理解"}, {"word": "cut", "ipa": "/kʌt/", "zh": "切块", "page": 69, "level": "理解"}, {"word": "eat", "ipa": "/iːt/", "zh": "吃", "page": 69, "level": "理解"}, {"word": "cake", "ipa": "/keɪk/", "zh": "蛋糕", "page": 69, "level": "理解"}]}], "revision": {"title_en": "Being a good guest", "title_zh": "做个好客人", "pages": [74, 77], "tasks": ["Read aloud 朗读做客对话", "Listen and tick 听音勾选", "Match the body parts 身体部位连线", "Look and circle 看图圈选（数量/颜色/帮忙方式/水果）", "Choose a picture and act it out 表演", "Listen and chant 做客礼仪歌谣", "Read the list aloud 朗读做客清单（敲门、问好、道谢、分享、道别）"], "recycles": ["body parts", "family", "pets/animals", "fruit", "colours", "numbers 1–10", "礼貌用语"]}, "appendices": [{"id": "Appendix 1", "name": "Songs 歌曲", "pages": "p78–79", "note": "6 首：Nice to meet you / My family（含 Finger family song）/ Animal song / Plants and us / Colour song / Numbers"}, {"id": "Appendix 2", "name": "Chants in \"Letters and sounds\" 语音歌谣", "pages": "p80–82", "note": "26 个字母，每字母 2 段歌谣：Show me a… + X is for /x/"}, {"id": "Appendix 3", "name": "Words in each unit 单元词汇表", "pages": "p83–85", "note": "108 个词，按单元排列，含音标、释义、页码"}, {"id": "Appendix 4", "name": "Vocabulary 词汇表", "pages": "p86–88", "note": "108 个词，按 A–Z 排列"}, {"id": "Appendix 5", "name": "Useful expressions 常用表达", "pages": "p89–90", "note": "按单元整理，中英对照"}, {"id": "Appendix 6", "name": "The alphabet 字母表", "pages": "p91", "note": "26 字母"}]}, {"id": "v2", "label": "三年级下册", "edition": "2025 年版（依据《义务教育英语课程标准（2022 年版）》编写）", "pages": 98, "units": [{"n": 1, "tEn": "Meeting new people", "tZh": "认识新朋友", "pages": [2, 13], "bigQ": "How do we get to know people?", "song": "Where are you from?", "A": {"q": "How do we greet new people?", "fn": ["询问与介绍姓名", "询问与说明来自哪里"], "s": [{"en": "Hi! I'm Zhang Peng. What's your name?", "zh": "嗨！我是张鹏。你叫什么名字？"}, {"en": "My name's Amy Green. I'm new here.", "zh": "我叫埃米·格林。我是新来的。"}, {"en": "Where are you from? — I'm from the UK.", "zh": "你来自哪里？——我来自英国。"}, {"en": "I'm from Shandong, China. What about you?", "zh": "我来自中国山东。你呢？"}, {"en": "Me too!", "zh": "我也是！"}]}, "B": {"q": "How can we be polite?", "fn": ["礼貌用语（让路、致谢、应答）", "询问第三方是谁"], "s": [{"en": "Let me help.", "zh": "我来帮忙。"}, {"en": "After you! / Thank you. / You're welcome.", "zh": "您先请！/ 谢谢。/ 别客气。"}, {"en": "Who's that girl? — That's our new neighbour, Amy.", "zh": "那个女孩是谁？——是我们的新邻居埃米。"}, {"en": "Who's that man? — That's my new teacher, Mr Lin.", "zh": "那位男士是谁？——是我的新老师林老师。"}, {"en": "The man is my neighbour. Nice to see you.", "zh": "那位男士是我的邻居。很高兴见到你。"}]}, "phonics": null, "spell": {"rule": "a-e（哑音 e 前的 a 读字母音 /eɪ/）", "contrast": ["cake", "cat", "dad", "date", "hat", "hate"], "chant": "Hello, Jake. My name is Dave. Let's play a game. I can make a cake."}, "project": "Make a poster for the food festival 制作美食节海报", "reading": "Zoom 与 Zip 的世界之旅（p12–13）“East or west, home is best.”", "check": ["I can greet new people and politely offer help.", "I can say the name of different countries.", "I can introduce my teachers and classmates.", "I can read and spell words with \"a-e\"."], "vocab": [{"word": "where", "ipa": "/weə(r)/", "zh": "在哪里；到哪里", "page": 4, "level": "理解"}, {"word": "from", "ipa": "/frɒm/", "zh": "（表示来源）来自，从……来", "page": 4, "level": "理解"}, {"word": "about", "ipa": "/əˈbaʊt/", "zh": "关于；大约", "page": 4, "level": "理解"}, {"word": "today", "ipa": "/təˈdeɪ/", "zh": "今天", "page": 5, "level": "理解"}, {"word": "teacher", "ipa": "/ˈtiːtʃə(r)/", "zh": "教师", "page": 5, "level": "运用"}, {"word": "student", "ipa": "/ˈstjuːdnt/", "zh": "学生", "page": 5, "level": "运用"}, {"word": "after", "ipa": "/ˈɑːftə(r)/", "zh": "在……后面", "page": 7, "level": "理解"}, {"word": "who", "ipa": "/huː/", "zh": "谁；什么人", "page": 7, "level": "理解"}, {"word": "girl", "ipa": "/ɡɜːl/", "zh": "女孩", "page": 7, "level": "运用"}, {"word": "neighbour", "ipa": "/ˈneɪbə(r)/", "zh": "邻居", "page": 7, "level": "理解"}, {"word": "boy", "ipa": "/bɔɪ/", "zh": "男孩", "page": 8, "level": "运用"}, {"word": "woman", "ipa": "/ˈwʊmən/", "zh": "成年女子；妇女", "page": 8, "level": "运用"}, {"word": "man", "ipa": "/mæn/", "zh": "成年男子；男人", "page": 8, "level": "运用"}, {"word": "Mr", "ipa": "/ˈmɪstə(r)/", "zh": "（用于男子的姓氏或姓名前）先生", "page": 8, "level": "理解"}, {"word": "classmate", "ipa": "/ˈklɑːsmeɪt/", "zh": "同班同学", "page": 9, "level": "理解"}, {"word": "he", "ipa": "/hiː/", "zh": "他", "page": 9, "level": "理解"}, {"word": "also", "ipa": "/ˈɔːlsəʊ/", "zh": "也", "page": 9, "level": "理解"}, {"word": "English", "ipa": "/ˈɪŋɡlɪʃ/", "zh": "英语的；英语", "page": 9, "level": "理解"}, {"word": "she", "ipa": "/ʃiː/", "zh": "她", "page": 9, "level": "理解"}, {"word": "very", "ipa": "/ˈveri/", "zh": "很；非常；十分", "page": 9, "level": "理解"}, {"word": "UK", "ipa": "/ˌjuː ˈkeɪ/", "zh": "英国", "page": 4, "level": "运用"}, {"word": "China", "ipa": "/ˈtʃaɪnə/", "zh": "中国", "page": 4, "level": "运用"}, {"word": "Canada", "ipa": "/ˈkænədə/", "zh": "加拿大", "page": 5, "level": "运用"}, {"word": "USA", "ipa": "/ˌjuː es ˈeɪ/", "zh": "美国", "page": 5, "level": "运用"}]}, {"n": 2, "tEn": "My words and actions", "tZh": "我的语言和行动", "pages": [14, 25], "bigQ": "How do you express yourself?", "song": "Expressing yourself", "A": {"q": "How do we describe things?", "fn": ["描述动物外形特征（It has…）", "表达喜好并说明理由"], "s": [{"en": "Do you like dogs? — Yes, I do. Dogs are friendly.", "zh": "你喜欢狗吗？——喜欢。狗很友善。"}, {"en": "It's orange. It has a long tail and big ears.", "zh": "它是橙色的。它有长尾巴和大耳朵。"}, {"en": "Your dog is cute. It has a long body and short legs.", "zh": "你的狗很可爱。它有长长的身体和短短的腿。"}, {"en": "Yes, that's right.", "zh": "对，没错。"}, {"en": "They can help us too.", "zh": "它们也能帮助我们。"}]}, "B": {"q": "How do we show our feelings?", "fn": ["询问与说明日常行为习惯", "表达情感与爱意的方式"], "s": [{"en": "Do you often say that to your mum? — Yes, I do. / No, I don't.", "zh": "你经常对妈妈那么说吗？——是的。/ 不。"}, {"en": "I often make her gifts.", "zh": "我经常给她做礼物。"}, {"en": "Bye, Mum. Love you!", "zh": "再见，妈妈。爱你！"}, {"en": "Let's make a card. / Let's sing and dance.", "zh": "我们做张贺卡吧。/ 我们唱歌跳舞吧。"}, {"en": "We express ourselves in many ways.", "zh": "我们用很多种方式表达自己。"}]}, "phonics": null, "spell": {"rule": "-e 结尾的 e 不发音、前面的元音读字母音（he / she / me / be / we）", "contrast": ["we", "be", "she", "me", "he"], "chant": "He likes to run. She likes to jump. We sing and dance. Be happy and have fun!"}, "project": "Make a mind map about pets and friends 制作宠物与朋友思维导图", "reading": "用水果拼出动物和朋友（p24–25）", "check": ["I can talk about my pet.", "I can say how I show my love to my family.", "I can say how people show their feelings.", "I can read and spell words with \"-e\"."], "vocab": [{"word": "has", "ipa": "/hæz/", "zh": "（have 的第三人称单数形式）具有（某种外表、特性或特征）", "page": 16, "level": "理解"}, {"word": "long", "ipa": "/lɒŋ/", "zh": "（长度或距离）长的", "page": 16, "level": "运用"}, {"word": "body", "ipa": "/ˈbɒdi/", "zh": "身体", "page": 16, "level": "理解"}, {"word": "short", "ipa": "/ʃɔːt/", "zh": "短的；个子矮的", "page": 16, "level": "运用"}, {"word": "leg", "ipa": "/leɡ/", "zh": "腿", "page": 16, "level": "理解"}, {"word": "right", "ipa": "/raɪt/", "zh": "（意见或判断）准确，确切，恰当", "page": 16, "level": "理解"}, {"word": "fat", "ipa": "/fæt/", "zh": "肥的；肥胖的", "page": 17, "level": "运用"}, {"word": "thin", "ipa": "/θɪn/", "zh": "瘦的", "page": 17, "level": "运用"}, {"word": "slow", "ipa": "/sləʊ/", "zh": "缓慢的；慢的", "page": 17, "level": "运用"}, {"word": "love", "ipa": "/lʌv/", "zh": "喜爱；爱", "page": 17, "level": "理解"}, {"word": "tail", "ipa": "/teɪl/", "zh": "尾；尾巴", "page": 17, "level": "理解"}, {"word": "her", "ipa": "/hɜː(r)/", "zh": "她；她的", "page": 19, "level": "理解"}, {"word": "gift", "ipa": "/ɡɪft/", "zh": "礼物", "page": 19, "level": "理解"}, {"word": "picture", "ipa": "/ˈpɪktʃə(r)/", "zh": "图画；绘画", "page": 20, "level": "运用"}, {"word": "card", "ipa": "/kɑːd/", "zh": "贺卡；慰问卡；卡片", "page": 20, "level": "运用"}, {"word": "sing", "ipa": "/sɪŋ/", "zh": "唱（歌）；演唱", "page": 20, "level": "运用"}, {"word": "dance", "ipa": "/dɑːns/", "zh": "跳舞", "page": 20, "level": "运用"}, {"word": "talk", "ipa": "/tɔːk/", "zh": "说话；讲话；谈话", "page": 21, "level": "理解"}, {"word": "face", "ipa": "/feɪs/", "zh": "脸；面孔", "page": 21, "level": "理解"}, {"word": "all", "ipa": "/ɔːl/", "zh": "所有；全部", "page": 21, "level": "理解"}, {"word": "song", "ipa": "/sɒŋ/", "zh": "歌；歌曲", "page": 21, "level": "理解"}, {"word": "or", "ipa": "/ɔː(r)/", "zh": "或；或者；还是", "page": 21, "level": "理解"}, {"word": "so", "ipa": "/səʊ/", "zh": "（表示大小或数量）这么，那么", "page": 21, "level": "理解"}, {"word": "much", "ipa": "/mʌtʃ/", "zh": "许多；大量", "page": 21, "level": "理解"}]}, {"n": 3, "tEn": "Tools and senses for learning", "tZh": "学习的工具与感官", "pages": [26, 37], "bigQ": "What helps us learn?", "song": "Can I use your pen?", "A": {"q": "What tools do we need to learn?", "fn": ["礼貌借用文具（Can I use…?）", "说出学习用品的名称"], "s": [{"en": "Can I use your eraser, please? — Sure. Here you are.", "zh": "我可以用一下你的橡皮吗？——当然。给你。"}, {"en": "Excuse me. Can I use your ruler?", "zh": "劳驾，我可以用一下你的尺子吗？"}, {"en": "I can't find my ruler. Can I use your ruler, Zhang Peng?", "zh": "我找不到我的尺子了。我可以用你的尺子吗，张鹏？"}, {"en": "No problem.", "zh": "没问题。"}, {"en": "I have a pen, a pencil, ...", "zh": "我有一支钢笔、一支铅笔……"}]}, "B": {"q": "How do our senses help us learn?", "fn": ["询问与说明这些/那些是什么", "说明五种感官的用途"], "s": [{"en": "What are these? — They're grapes.", "zh": "这些是什么？——是葡萄。"}, {"en": "What's this? — It's a pencil.", "zh": "这是什么？——是一支铅笔。"}, {"en": "I smell with my nose. I taste with my tongue.", "zh": "我用鼻子闻。我用舌头尝。"}, {"en": "I see and hear in class.", "zh": "我在课堂上用眼睛看、用耳朵听。"}, {"en": "I can use paper, pencils, books and computers to learn.", "zh": "我可以用纸、铅笔、书和电脑来学习。"}]}, "phonics": null, "spell": {"rule": "i-e（哑音 e 前的 i 读字母音 /aɪ/）", "contrast": ["big", "bike", "sit", "size", "lip", "like", "fin", "fine"], "chant": "Let's make a kite. Write number nine. The kite is nice! High five!"}, "project": "Make a sense book 制作感官书", "reading": "动物也有自己的学习方式（p36–37）", "check": ["I can ask others politely to share school things.", "I can say how I use my senses.", "I can say how school things and the five senses help me learn.", "I can read and spell words with \"i-e\"."], "vocab": [{"word": "eraser", "ipa": "/ɪˈreɪzə(r)/", "zh": "橡皮", "page": 28, "level": "理解"}, {"word": "find", "ipa": "/faɪnd/", "zh": "找到；找回", "page": 28, "level": "理解"}, {"word": "ruler", "ipa": "/ˈruːlə(r)/", "zh": "直尺", "page": 28, "level": "运用"}, {"word": "pen", "ipa": "/pen/", "zh": "钢笔", "page": 29, "level": "运用"}, {"word": "pencil", "ipa": "/ˈpensl/", "zh": "铅笔", "page": 29, "level": "运用"}, {"word": "book", "ipa": "/bʊk/", "zh": "书；书籍", "page": 29, "level": "运用"}, {"word": "bag", "ipa": "/bæɡ/", "zh": "包；袋", "page": 29, "level": "运用"}, {"word": "paper", "ipa": "/ˈpeɪpə(r)/", "zh": "纸", "page": 29, "level": "运用"}, {"word": "these", "ipa": "/ðiːz/", "zh": "这些", "page": 31, "level": "理解"}, {"word": "see", "ipa": "/siː/", "zh": "看见", "page": 32, "level": "运用"}, {"word": "smell", "ipa": "/smel/", "zh": "闻（气味）", "page": 32, "level": "运用"}, {"word": "taste", "ipa": "/teɪst/", "zh": "尝（味道）", "page": 32, "level": "运用"}, {"word": "hear", "ipa": "/hɪə(r)/", "zh": "听见；听到", "page": 32, "level": "运用"}, {"word": "touch", "ipa": "/tʌtʃ/", "zh": "触摸；碰", "page": 32, "level": "运用"}, {"word": "nose", "ipa": "/nəʊz/", "zh": "鼻；鼻子", "page": 33, "level": "理解"}, {"word": "tongue", "ipa": "/tʌŋ/", "zh": "舌；舌头", "page": 33, "level": "理解"}, {"word": "class", "ipa": "/klɑːs/", "zh": "课；班级", "page": 33, "level": "理解"}, {"word": "in class", "ipa": "—", "zh": "在课堂上", "page": 33, "level": "理解"}, {"word": "computer", "ipa": "/kəmˈpjuːtə(r)/", "zh": "计算机；电脑", "page": 33, "level": "理解"}, {"word": "learn", "ipa": "/lɜːn/", "zh": "学；学习", "page": 33, "level": "理解"}]}, {"n": 4, "tEn": "Healthy food", "tZh": "健康饮食", "pages": [38, 49], "bigQ": "What is healthy food?", "song": "Would you like some bread?", "A": {"q": "What do we eat?", "fn": ["表达想吃什么（I'd like…）", "说出常见食物名称"], "s": [{"en": "I'd like some bread and eggs, please.", "zh": "我想要一些面包和鸡蛋。"}, {"en": "Have some milk too. — Thanks.", "zh": "也喝点牛奶吧。——谢谢。"}, {"en": "I'd like some juice and noodles.", "zh": "我想要一些果汁和面条。"}, {"en": "Breakfast time!", "zh": "早餐时间到了！"}]}, "B": {"q": "What shall we eat?", "fn": ["礼貌提供与接受/拒绝食物（Would you like…?）", "表达健康饮食的建议"], "s": [{"en": "Would you like some rice and meat? — Yes, please. / No, thank you.", "zh": "你想吃点米饭和肉吗？——好的，谢谢。/ 不用了，谢谢。"}, {"en": "Have some vegetables too. They're good.", "zh": "也吃点蔬菜吧。它们很好。"}, {"en": "This is my healthy plate. I have vegetables, ...", "zh": "这是我的健康餐盘。我有蔬菜……"}, {"en": "Eat some every day!", "zh": "每天吃一些吧！"}, {"en": "Candy and cake are yummy, but don't eat too much!", "zh": "糖果和蛋糕很好吃，但别吃太多！"}]}, "phonics": null, "spell": {"rule": "o-e（哑音 e 前的 o 读字母音 /əʊ/）", "contrast": ["not", "note", "hot", "home", "John", "Jones", "box", "bone"], "chant": "Joe Jones eats at home. He likes to eat a very big cone. Healthy food is no joke. Less junk food, Joe. I hope."}, "project": "Plan healthy plates for a day 设计一日健康餐盘", "reading": "Zoom 的健康饮食（p48–49）", "check": ["I can choose food I like.", "I can read a menu and order food.", "I can give some ideas for healthy eating.", "I can read and spell words with \"o-e\"."], "vocab": [{"word": "breakfast", "ipa": "/ˈbrekfəst/", "zh": "早餐；早饭", "page": 40, "level": "理解"}, {"word": "time", "ipa": "/taɪm/", "zh": "时间", "page": 40, "level": "理解"}, {"word": "bread", "ipa": "/bred/", "zh": "面包", "page": 40, "level": "运用"}, {"word": "egg", "ipa": "/eɡ/", "zh": "（作食物用的）蛋；鸡蛋", "page": 40, "level": "运用"}, {"word": "milk", "ipa": "/mɪlk/", "zh": "（牛或羊等的）奶", "page": 40, "level": "运用"}, {"word": "noodle", "ipa": "/ˈnuːdl/", "zh": "（常用复数）面条", "page": 41, "level": "运用"}, {"word": "juice", "ipa": "/dʒuːs/", "zh": "果汁", "page": 41, "level": "运用"}, {"word": "rice", "ipa": "/raɪs/", "zh": "大米", "page": 43, "level": "运用"}, {"word": "meat", "ipa": "/miːt/", "zh": "肉", "page": 43, "level": "运用"}, {"word": "vegetable", "ipa": "/ˈvedʒtəbl/", "zh": "蔬菜", "page": 43, "level": "运用"}, {"word": "healthy", "ipa": "/ˈhelθi/", "zh": "健康的", "page": 44, "level": "理解"}, {"word": "plate", "ipa": "/pleɪt/", "zh": "盘子", "page": 44, "level": "理解"}, {"word": "soup", "ipa": "/suːp/", "zh": "汤", "page": 44, "level": "运用"}, {"word": "fruit", "ipa": "/fruːt/", "zh": "水果", "page": 44, "level": "运用"}, {"word": "colourful", "ipa": "/ˈkʌləfl/", "zh": "五彩缤纷的", "page": 45, "level": "理解"}, {"word": "candy", "ipa": "/ˈkændi/", "zh": "糖果", "page": 45, "level": "理解"}, {"word": "yummy", "ipa": "/ˈjʌmi/", "zh": "很好吃的", "page": 45, "level": "理解"}]}, {"n": 5, "tEn": "Old things", "tZh": "旧物", "pages": [50, 61], "bigQ": "How can we make things useful again?", "song": "Giving old things new life", "A": {"q": "What old things do you have?", "fn": ["询问与回答拥有某物（Do you have…?）", "说出玩具名称"], "s": [{"en": "Do you have any old school things? — Yes, I do. I have some old books.", "zh": "你有旧的学习用品吗？——有。我有一些旧书。"}, {"en": "This boat is cool. You can keep it. — Thanks!", "zh": "这只船很酷。你可以留着它。——谢谢！"}, {"en": "That's right. They're my old toys. Do you have old things?", "zh": "没错。它们是我的旧玩具。你有旧东西吗？"}, {"en": "I have many toys. They are all around.", "zh": "我有很多玩具。它们到处都是。"}]}, "B": {"q": "How can we reuse things?", "fn": ["询问与说明物品位置（in / on / under）", "提出旧物再利用的建议"], "s": [{"en": "Where is the doll? Is it in the box? — No, it isn't. / Yes, it is.", "zh": "玩偶在哪里？在盒子里吗？——不在。/ 在。"}, {"en": "Is it on the shelf? — It's in the box.", "zh": "在架子上吗？——在盒子里。"}, {"en": "Put your old map on the wall. Put your books under the ball.", "zh": "把你的旧地图挂在墙上。把你的书放在球下面。"}, {"en": "They are still good. I put them in a box.", "zh": "它们还挺好。我把它们放在一个盒子里。"}]}, "phonics": null, "spell": {"rule": "u-e（哑音 e 前的 u 读字母音 /juː/）", "contrast": ["cut", "cute", "us", "use", "bus", "excuse", "fun", "tube"], "chant": "One cute cat uses two old balls. Two cute cats use three old balls..."}, "project": "Reuse some old things 旧物改造", "reading": "给旧机器人找零件（p60–61）", "check": ["I can talk about old things I have.", "I can ask and say where things are.", "I can share ideas about reusing things.", "I can read and spell words with \"u-e\"."], "vocab": [{"word": "boat", "ipa": "/bəʊt/", "zh": "小船；舟", "page": 52, "level": "运用"}, {"word": "cool", "ipa": "/kuːl/", "zh": "（因时髦、漂亮且与众不同而）酷的，绝妙的", "page": 52, "level": "理解"}, {"word": "keep", "ipa": "/kiːp/", "zh": "保有；留着", "page": 52, "level": "理解"}, {"word": "at", "ipa": "/æt/", "zh": "在（某处）", "page": 53, "level": "理解"}, {"word": "home", "ipa": "/həʊm/", "zh": "家；住所", "page": 53, "level": "理解"}, {"word": "ball", "ipa": "/bɔːl/", "zh": "球", "page": 53, "level": "运用"}, {"word": "doll", "ipa": "/dɒl/", "zh": "玩偶；玩具娃娃", "page": 53, "level": "运用"}, {"word": "car", "ipa": "/kɑː(r)/", "zh": "小汽车；轿车", "page": 53, "level": "运用"}, {"word": "on", "ipa": "/ɒn/", "zh": "（覆盖、附着）在……上", "page": 55, "level": "运用"}, {"word": "shelf", "ipa": "/ʃelf/", "zh": "（复数 shelves /ʃelvz/）架子", "page": 55, "level": "理解"}, {"word": "in", "ipa": "/ɪn/", "zh": "在……内；在……中", "page": 55, "level": "运用"}, {"word": "box", "ipa": "/bɒks/", "zh": "盒子", "page": 55, "level": "理解"}, {"word": "cap", "ipa": "/kæp/", "zh": "帽子", "page": 55, "level": "运用"}, {"word": "map", "ipa": "/mæp/", "zh": "地图", "page": 56, "level": "运用"}, {"word": "under", "ipa": "/ˈʌndə(r)/", "zh": "在（或到、通过）……下面", "page": 56, "level": "运用"}, {"word": "still", "ipa": "/stɪl/", "zh": "还是；仍然", "page": 57, "level": "理解"}, {"word": "put", "ipa": "/pʊt/", "zh": "放；安置", "page": 57, "level": "理解"}]}, {"n": 6, "tEn": "Numbers in life", "tZh": "生活中的数字", "pages": [62, 73], "bigQ": "How can numbers help us?", "song": "Let me count!", "A": {"q": "How do numbers help us count things?", "fn": ["询问数量（How many…?）", "11–20 的数字表达"], "s": [{"en": "How many books do we have? — We have fifteen books.", "zh": "我们有多少本书？——我们有十五本。"}, {"en": "How many boxes do we need? — Twelve. We need three boxes.", "zh": "我们需要多少个箱子？——十二个。我们需要三个箱子。"}, {"en": "How many apples do we have now? — We need fifteen.", "zh": "我们现在有多少个苹果？——我们需要十五个。"}, {"en": "Five and six makes eleven. Add one, it's twelve.", "zh": "五加六是十一。再加一是十二。"}]}, "B": {"q": "How do numbers help us buy things?", "fn": ["询问价格（How much…?）", "购物交流与付款"], "s": [{"en": "How much is this bag? — Six yuan, or three for seventeen yuan.", "zh": "这个包多少钱？——六元，或者十七元三个。"}, {"en": "It's twenty yuan.", "zh": "二十元。"}, {"en": "How much is this book? — It's twelve yuan.", "zh": "这本书多少钱？——十二元。"}, {"en": "I pay fifteen yuan for five books.", "zh": "我花十五元买了五本书。"}]}, "phonics": null, "spell": {"rule": "字母 c / g / l / y 的两种读音", "contrast": ["cake", "face", "girl", "orange", "cool", "long", "my", "yellow"], "chant": "My cat has a big face. The girl can't tell its age. It's eighteen. Look at its legs. Cool!"}, "project": "Make and sell fun sandwiches 制作并售卖趣味三明治", "reading": "生活中的数字（p72–73）", "check": ["I can use the numbers 11 to 20 to count things.", "I can use numbers to buy or sell things.", "I can use the numbers 11 to 20 in different places.", "I can read and spell words with \"c\", \"g\", \"l\" and \"y\"."], "vocab": [{"word": "fifteen", "ipa": "/ˌfɪfˈtiːn/", "zh": "十五", "page": 64, "level": "运用"}, {"word": "twelve", "ipa": "/twelv/", "zh": "十二", "page": 64, "level": "运用"}, {"word": "fourteen", "ipa": "/ˌfɔːˈtiːn/", "zh": "十四", "page": 65, "level": "运用"}, {"word": "thirteen", "ipa": "/ˌθɜːˈtiːn/", "zh": "十三", "page": 65, "level": "运用"}, {"word": "eleven", "ipa": "/ɪˈlevn/", "zh": "十一", "page": 65, "level": "运用"}, {"word": "twenty", "ipa": "/ˈtwenti/", "zh": "二十", "page": 67, "level": "运用"}, {"word": "seventeen", "ipa": "/ˌsevnˈtiːn/", "zh": "十七", "page": 67, "level": "运用"}, {"word": "sixteen", "ipa": "/ˌsɪksˈtiːn/", "zh": "十六", "page": 67, "level": "运用"}, {"word": "eighteen", "ipa": "/ˌeɪˈtiːn/", "zh": "十八", "page": 68, "level": "运用"}, {"word": "nineteen", "ipa": "/ˌnaɪnˈtiːn/", "zh": "十九", "page": 68, "level": "运用"}, {"word": "piggy bank", "ipa": "/ˈpɪɡi bæŋk/", "zh": "猪形储钱罐", "page": 69, "level": "理解"}, {"word": "pay", "ipa": "/peɪ/", "zh": "付费", "page": 69, "level": "理解"}, {"word": "back", "ipa": "/bæk/", "zh": "回到原处", "page": 69, "level": "理解"}]}], "revision": {"title_en": "Going to a school fair", "title_zh": "去学校游园会", "pages": [74, 77], "tasks": ["Read aloud 朗读游园会对话", "Listen, tick or cross 听音判断", "Cross out the words that don't belong 划掉不同类词", "Choose and role-play 问答配对角色扮演", "Read, write and say 填写价格与花费", "Make your to-do list 制定游园会待办清单"], "recycles": ["姓名与国籍", "物品特征描述", "借用文具", "点餐与价格", "旧物买卖", "11–20 数字"]}, "appendices": [{"id": "Appendix 1", "name": "Songs 歌曲", "pages": "p78–79", "note": "6 首：Where are you from? / Expressing yourself / Can I use your pen? / Would you like some bread? / Giving old things new life / Let me count!"}, {"id": "Appendix 2", "name": "Words in each unit 单元词汇表", "pages": "p80–82", "note": "115 个词，按单元排列"}, {"id": "Appendix 3", "name": "Vocabulary 词汇表", "pages": "p83–86", "note": "按 A–Z 排列"}, {"id": "Appendix 4", "name": "Useful expressions 常用表达", "pages": "p87–88", "note": "按单元整理，中英对照"}, {"id": "Appendix 5", "name": "Pronunciation 语音", "pages": "p89–90", "note": "单词重音（uncle/teacher/family…）+ 语调（一般疑问句升调、特殊疑问句降调）"}]}]};
+const S = {book: 0, unit: 0, filter: "all"};
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const cur = () => DATA.books[S.book];
+const lvLabel = l => l === "运用"
+  ? '<span class="lv y">要会用</span>' : '<span class="lv n">认得即可</span>';
+
+function renderTabs(){
+  const el = $("#tabs");
+  el.innerHTML = DATA.books.map((b,i) =>
+    `<button class="tab" role="tab" aria-selected="${i===S.book}" data-b="${i}">${b.label}</button>`).join("");
+  el.querySelectorAll("button").forEach(btn => btn.onclick = () => { switchBook(+btn.dataset.b); });
+  $("#edition").textContent = cur().edition + " · " + cur().pages + " 页";
+}
+
+function switchBook(i){
+  S.book = i; S.unit = 0; S.filter = "all";
+  $("#q").value = ""; $("#hits").classList.remove("on");
+  renderTabs(); renderNav(); renderView(); window.scrollTo({top:0});
+}
+
+function renderNav(){
+  const b = cur();
+  const items = [["sec","单元"]];
+  const list = [];
+  b.units.forEach((u,i) => list.push(
+    `<button data-u="${i}" aria-current="${i===S.unit}">Unit ${u.n}　${esc(u.tEn)}<small>${esc(u.tZh)}</small></button>`));
+  let h = '<div class="sec">单元</div>' + list.join("") +
+    '<div class="sec">复习与附录</div>' +
+    `<button data-u="rev" aria-current="${S.unit==='rev'}">Revision<small>${esc(b.revision.title_zh)}</small></button>` +
+    `<button data-u="app" aria-current="${S.unit==='app'}">附录<small>歌曲 · 词表 · 表达 · 语音</small></button>`;
+  const nav = $("#nav");
+  nav.innerHTML = h;
+  nav.querySelectorAll("button").forEach(btn => btn.onclick = () => {
+    const v = btn.dataset.u;
+    S.unit = (v === "rev" || v === "app") ? v : +v;
+    S.filter = "all";
+    renderNav(); renderView(); window.scrollTo({top:0});
+  });
+}
+
+function sentenceTable(list){
+  return `<table><thead><tr><th>English</th><th>中文</th></tr></thead><tbody>` +
+    list.map(x => `<tr><td class="en">${esc(x.en)}</td><td class="zh">${esc(x.zh)}</td></tr>`).join("") +
+    `</tbody></table>`;
+}
+
+function vocabBlock(u){
+  const rows = u.vocab.filter(v => S.filter === "all" ||
+    (S.filter === "y" ? v.level === "运用" : v.level !== "运用"));
+  const y = u.vocab.filter(v => v.level === "运用").length;
+  const n = u.vocab.length - y;
+  return `<section class="part">
+    <div class="parthead"><h3>词汇</h3><span class="tag">${u.vocab.length} 词</span></div>
+    <div class="vfilter">
+      <button data-f="all" aria-pressed="${S.filter==='all'}">全部 ${u.vocab.length}</button>
+      <button data-f="y" aria-pressed="${S.filter==='y'}">要会用 ${y}</button>
+      <button data-f="n" aria-pressed="${S.filter==='n'}">认得即可 ${n}</button>
+    </div>
+    <table><thead><tr><th>单词</th><th>音标</th><th>释义</th><th>页</th><th>掌握</th></tr></thead><tbody>` +
+    rows.map(v => `<tr><td><b>${esc(v.word)}</b></td><td class="ipa">${esc(v.ipa)}</td>
+      <td class="zh">${esc(v.zh)}</td><td class="pg">p.${v.page}</td><td>${lvLabel(v.level)}</td></tr>`).join("") +
+    `</tbody></table></section>`;
+}
+
+function renderUnit(){
+  const u = cur().units[S.unit];
+  let h = `<div class="head">
+    <div>
+      <div class="idx">UNIT ${u.n}　·　p.${u.pages[0]}–${u.pages[1]}</div>
+      <h2>${esc(u.tEn)}</h2>
+      <div class="zh">${esc(u.tZh)}</div>
+    </div>
+    <div class="bigq"><span>单元大问题</span><b>${esc(u.bigQ)}</b></div>
+  </div>
+  <div class="meta">
+    <span class="chip">歌曲　${esc(u.song || "—")}</span>
+    <span class="chip">项目　${esc(u.project)}</span>
+    <span class="chip">Reading time　${esc(u.reading)}</span>
+  </div>`;
+
+  h += `<section class="part">
+    <div class="parthead"><h3>Part A</h3><span class="tag">必学</span></div>
+    <p class="q">驱动问题：<b>${esc(u.A.q)}</b></p>
+    <div class="fn">${u.A.fn.map(f => `<span>${esc(f)}</span>`).join("")}</div>
+    ${sentenceTable(u.A.s)}
+  </section>`;
+
+  if (u.phonics){
+    h += `<section class="part"><div class="rule">
+      <h4>Letters and sounds　字母与音素</h4>
+      <table><thead><tr><th>字母</th><th>音素</th><th>例词</th></tr></thead><tbody>` +
+      u.phonics.map(p => `<tr><td><b>${esc(p.letter)}</b></td><td class="ipa">${esc(p.sound)}</td>
+        <td>${p.examples.map(e => `<code>${esc(e)}</code>`).join(" ")}</td></tr>`).join("") +
+      `</tbody></table></div></section>`;
+  }
+  if (u.spell){
+    h += `<section class="part"><div class="rule">
+      <h4>Let's spell　拼读规则</h4>
+      <p style="margin:0;font-size:14px">${esc(u.spell.rule)}</p>
+      <div class="pair">${u.spell.contrast.map(w => `<code>${esc(w)}</code>`).join("")}</div>
+      <p class="chant">“${esc(u.spell.chant)}”</p></div></section>`;
+  }
+
+  h += `<section class="part">
+    <div class="parthead"><h3>Part B</h3><span class="tag">必学</span></div>
+    <p class="q">驱动问题：<b>${esc(u.B.q)}</b></p>
+    <div class="fn">${u.B.fn.map(f => `<span>${esc(f)}</span>`).join("")}</div>
+    ${sentenceTable(u.B.s)}
+  </section>`;
+
+  h += `<section class="part">
+    <div class="parthead"><h3>Part C</h3><span class="tag opt">选学</span></div>
+    <div class="rule" style="margin-bottom:14px">
+      <h4>Project　项目</h4><p style="margin:0;font-size:14px">${esc(u.project)}</p></div>
+    <div class="rule" style="margin-bottom:14px">
+      <h4>Self-check　自评</h4>
+      <ol class="check">${u.check.map(c => `<li>${esc(c)}</li>`).join("")}</ol></div>
+    <div class="rule">
+      <h4>Reading time　拓展阅读</h4><p style="margin:0;font-size:14px">${esc(u.reading)}</p></div>
+  </section>`;
+
+  return h + vocabBlock(u);
+}
+
+function renderRevision(){
+  const r = cur().revision;
+  const pg = r.pages ? `p.${r.pages[0]}–${r.pages[1]}` : "";
+  return `<div class="head"><div>
+      <div class="idx">REVISION　·　${pg}</div>
+      <h2>${esc(r.title_en)}</h2><div class="zh">${esc(r.title_zh)}</div></div>
+      <div class="bigq"><span>定位</span><b>综合复习，不引入新语言</b></div></div>
+    <section class="part"><div class="parthead"><h3>活动</h3></div>
+      <ol class="check">${r.tasks.map(t => `<li>${esc(t)}</li>`).join("")}</ol></section>
+    <section class="part"><div class="parthead"><h3>复现的语言</h3></div>
+      <div class="fn">${r.recycles.map(t => `<span>${esc(t)}</span>`).join("")}</div></section>`;
+}
+
+function renderAppendix(){
+  const a = cur().appendices;
+  return `<div class="head"><div><div class="idx">APPENDIX</div><h2>附录</h2>
+      <div class="zh">歌曲 · 词表 · 常用表达 · 语音</div></div></div>
+    <table><thead><tr><th>编号</th><th>名称</th><th>页码</th><th>内容</th></tr></thead><tbody>` +
+    a.map(x => `<tr><td class="pg">${esc(x.id)}</td><td><b>${esc(x.name)}</b></td>
+      <td class="pg">${esc(x.pages)}</td><td class="zh">${esc(x.note)}</td></tr>`).join("") +
+    `</tbody></table>`;
+}
+
+function renderView(){
+  const v = $("#view");
+  if (S.unit === "rev") v.innerHTML = renderRevision();
+  else if (S.unit === "app") v.innerHTML = renderAppendix();
+  else v.innerHTML = renderUnit();
+  v.querySelectorAll(".vfilter button").forEach(btn => btn.onclick = () => {
+    S.filter = btn.dataset.f; renderView();
+  });
+}
+
+function search(q){
+  const box = $("#hits");
+  q = q.trim().toLowerCase();
+  if (!q){ box.classList.remove("on"); box.innerHTML = ""; return; }
+  const out = [];
+  for (const b of DATA.books){
+    for (const u of b.units){
+      for (const v of u.vocab){
+        if (v.word.toLowerCase().includes(q) || v.zh.includes(q)){
+          out.push(`<button class="hit" data-b="${b.id}" data-u="${u.n}"><b>${esc(v.word)}</b>
+            <span class="ipa">${esc(v.ipa)}</span><span>${esc(v.zh)}</span>${lvLabel(v.level)}
+            <span class="u">${b.label} U${u.n}</span></button>`);
+        }
+      }
+      for (const part of ["A","B"]){
+        for (const s of u[part].s){
+          if (s.en.toLowerCase().includes(q) || s.zh.includes(q)){
+            out.push(`<button class="hit" data-b="${b.id}" data-u="${u.n}">
+              <span class="en">${esc(s.en)}</span>
+              <span class="u">${b.label} U${u.n} · Part ${part}</span></button>`);
+          }
+        }
+      }
+    }
+  }
+  box.innerHTML = out.length
+    ? out.slice(0, 60).join("")
+    : `<div class="empty">没有匹配「${esc(q)}」</div>`;
+  box.classList.add("on");
+  box.querySelectorAll(".hit").forEach(el => el.onclick = () => {
+    const bi = DATA.books.findIndex(x => x.id === el.dataset.b);
+    S.book = bi; S.unit = +el.dataset.u - 1; S.filter = "all";
+    $("#q").value = ""; box.classList.remove("on"); box.innerHTML = "";
+    renderTabs(); renderNav(); renderView(); window.scrollTo({top:0});
+  });
+}
+
+$("#q").addEventListener("input", e => search(e.target.value));
+$("#q").addEventListener("keydown", e => {
+  if (e.key === "Escape"){ e.target.value = ""; search(""); e.target.blur(); }
+});
+document.addEventListener("click", e => {
+  if (!e.target.closest(".searchbox")) $("#hits").classList.remove("on");
+});
+
+renderTabs();
+renderNav();
+renderView();
+</script>
+</body>
+</html>
